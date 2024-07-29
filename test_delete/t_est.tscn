@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkvtle1gymir4"]
 
 [ext_resource type="PackedScene" uid="uid://q74pffdg4ba0" path="res://Player/player.tscn" id="1_5tam8"]
-[ext_resource type="PackedScene" uid="uid://cuo32n6c50bn1" path="res://Enemy/enemy.tscn" id="2_c1fmv"]
+[ext_resource type="PackedScene" uid="uid://cliyuqlmn3fb8" path="res://Enemies/dark_sheep.tscn" id="2_c1fmv"]
 
 [node name="TEst" type="Node2D"]
 y_sort_enabled = true
@@ -12,5 +12,6 @@ position = Vector2(156, 172)
 [node name="Node2D" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Enemy" parent="Node2D" instance=ExtResource("2_c1fmv")]
-position = Vector2(316, 189)
+[node name="DarkSheep" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_c1fmv")]
+position = Vector2(307, 203)
+player = NodePath("../Player")
